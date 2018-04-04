@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html>
-<!--<head>
+<head>
 <link rel="stylesheet" href="./static/DnD.css">
-</head>-->
+</head>
 	<body>
-		<form class="form-inline" method="POST" action="{{ url_for('home') }}">
-  		<div class="form-group">
-    		<div class="input-group">
-        	<span class="input-group-addon">Please select</span>
-       			<select name = "maps">
-				  		<option value="StarterSet_CragmawHideout_Player.jpg">Img1</option>
-				  		<option value="StarterSet_NorthSwordCoast_Player.jpg">Img2</option>
-				  		<option value="opel">Img3</option>
-				  		<option value="audi">Img4</option>
+	<table>
+		<tr>
+			<th> </th>
+			<th> </th>
+		</tr>
+		<tr>
+			<td>
+				<form class="form-inline" method="POST" action="{{ url_for('home') }}">
+  				<div class="form-group">
+    				<div class="input-group">
+        			<span class="input-group-addon">Please select</span>
+       					<select name = "maps">
+					  		<option value="StarterSet_CragmawHideout_Player.jpg">Img1</option>
+					  		<option value="StarterSet_NorthSwordCoast_Player.jpg">Img2</option>
+					  		<option value="opel">Img3</option>
+				  			<option value="audi">Img4</option>
 						</select>
-    		</div>
-    		<button type="submit" class="btn btn-default">Go</button>
-  		</div>
-		</form>
-		<form class="form-inline" method="POST" action="{{ url_for('home') }}">
-  		<div class ="form-group">
-    		<div class="input-group">
-        	<span class="input-group-addon">Please select</span>
-       			<select name = "tables">
-				  		<option value="wep">Table1</option>
-				  		<option value="StarterSet_NorthSwordCoast_Player.jpg">Table2</option>
-				  		<option value="opel">Img3</option>
-				  		<option value="audi">Img4</option>
-						</select>
-    		</div>
-    		<button type="submit" class="btn btn-default">Go</button>
-  		</div>
-		</form>
-		<img align ='left' src={{ img }} alt="StarterSet_CragmawHideout_Player" width={{ width }} height={{ height }}>
-		<div align = 'right'>
-			{{ table|safe }}
-		</div>
+    				</div>
+    				<button type="submit" class="btn btn-default">Go</button>
+  				</div>
+  				</form>
+  			</td>
+  			<td>
+				<form class="form-inline" method="POST" action="{{ url_for('home') }}">
+  				<div class ="form-group">
+    				<div class="input-group">
+        			<span class="input-group-addon">Please select</span>
+       				<select name = "tables">
+				  			<option value="wep">Weapons</option>
+				  			<option value="einkil">Einkil</option>
+				  			<option value="verna">Verna</option>
+				  			<option value="mei">Mei</option>
+					</select>
+    				</div>
+    				<button type="submit" class="btn btn-default">Go</button>
+  					</div>
+				</form>
+			</td>
+		</tr>
+		<tr>
+		<td>
+			<img align ='left' src={{ img }} alt="StarterSet_CragmawHideout_Player" width={{ width }} height={{ height }}>
+		</td>
+		<td>
+			<div align = 'right'>
+				{{ table|safe }}
+			</div>
+		</td>
+		</tr>
+		</table>
 	</body>
 </html>
 
